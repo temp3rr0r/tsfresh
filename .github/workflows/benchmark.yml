@@ -23,7 +23,7 @@ jobs:
           cd tests
           pytest benchmark.py --benchmark-min-rounds=4 --benchmark-only -n 0 --no-cov --benchmark-json output.json
       - name: Download artifact of previous benchmarks from default branch
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           github_token: ${{ github.token }}
           workflow: benchmark_default_branch.yml
